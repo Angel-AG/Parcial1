@@ -1,76 +1,184 @@
-header {
-
-
+/*  Small devices - Default   */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
-h2 {
+header {
+  display: none;
+}
 
+header,
+.content {
+  display: none;
+}
+
+nav {
+  height: 100vh;
+  padding: 1em;
 }
 
 .nav {
-
-
-  }
-
-  li {
-
-
-  }
-
-  .content{
-
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
-  .aside {
-
-  }
-
-  .slidebox{
-
-   
-  }
-
-  .article{
-
-  }
-
-
-.poem{
-
+.nav > li {
+  align-self: stretch;
+  text-align: center;
+  padding: 0.5em 1em;
+  border: 1px solid black;
 }
 
+li {
+}
+
+.content {
+  display: none;
+}
 
 /*Device = Tablets, Ipads (portrait)
   Screen = B/w 600px to 990px*/
-  @media (min-width:600px) and (max-width: 990px)  {
-    .article {
-
-  } 
-header{
-
-}
-}
-
-/*  Small devices    */
-@media (max-width:599px) {
-
-header,.content{
-
-}
-
-.nav {
-
-
+@media (min-width: 600px) and (max-width: 990px) {
+  nav {
+    height: 100%;
+    padding: 1em;
+    padding-right: 0;
   }
 
+  .nav {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-.nav > li {
+  .nav > li {
+    text-align: center;
+    padding: 0.5em;
+    width: 16%;
+    margin: 0.5em;
+    border: 1px solid black;
+  }
 
+  .content {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .aside {
+    width: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid black;
+  }
+
+  .slidebox {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .article {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid black;
+  }
+
+  .poem {
+    border: 1px solid black;
+    padding: 0.5em;
+  }
 }
 
+/*  Large devices    */
+@media (min-width: 991px) {
+  header {
+    width: 99vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
 
+  header > h2 {
+    width: 32%;
+    margin: 0.1em;
+    text-align: center;
+    border: 1px solid black;
+  }
+
+  nav {
+    height: 100%;
+    padding: 1em;
+    padding-right: 0;
+  }
+
+  .nav {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav > li {
+    text-align: center;
+    width: 18%;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border: 1px solid black;
+  }
+
+  .content {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .aside {
+    width: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid black;
+  }
+
+  .slidebox {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0.5em;
+  }
+
+  .article {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border: 1px solid black;
+  }
+
+  .poem {
+    width: 50%;
+    border: 1px solid black;
+    padding: 0.5em;
+  }
 }
-
-
-  
